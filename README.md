@@ -17,8 +17,11 @@ $chart->add_series({name => 'series_name', type => 'bar', data => [120, 200, 150
 $chart->render_html;
 
 # Render chart in image
-$chart->render_image(output => '/my-path/cool-chart.png', width => 600, height => 800);
+$chart->render_image(output => '/my-path/cool-chart.png', width => 800, height => 600);
 ```
+
+![Bar chart](https://raw.githubusercontent.com/giterlizzi/perl-Chart-ECharts/main/charts/bar.png)
+
 
 ## Install
 
