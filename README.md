@@ -16,9 +16,21 @@ $chart->add_series({name => 'series_name', type => 'bar', data => [120, 200, 150
 # Render in HTML
 $chart->render_html;
 
-# Render chart in image
+# Render chart in image (require Node.js)
 $chart->render_image(output => '/my-path/cool-chart.png', width => 800, height => 600);
 ```
+### Rendered HTML
+
+```.html
+<div id="id_41781780b562926c2c4f3f5ef99f43b381d16726" class="chart-container" style="min-width:auto;min-height:300px;"></div>
+<script>
+  let chart_41781780b562926c2c4f3f5ef99f43b381d16726 = echarts.init(document.getElementById('id_41781780b562926c2c4f3f5ef99f43b381d16726'), 'white', {"locale":"en","renderer":"canvas"});
+  let option_41781780b562926c2c4f3f5ef99f43b381d16726 = {"series":[{"data":[120,200,150,80,70,110,130],"name":"series_name","type":"bar"}],"xAxis":[{"data":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"type":"category"}],"yAxis":[{"type":"value"}]};
+  option_41781780b562926c2c4f3f5ef99f43b381d16726 && chart_41781780b562926c2c4f3f5ef99f43b381d16726.setOption(option_41781780b562926c2c4f3f5ef99f43b381d16726);
+</script>
+```
+
+### Rendered image
 
 ![Bar chart](https://raw.githubusercontent.com/giterlizzi/perl-Chart-ECharts/main/charts/bar.png)
 
