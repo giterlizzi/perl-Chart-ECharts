@@ -1,4 +1,5 @@
 Changes
+charts/bar.png
 INSTALL.md
 lib/Chart/ECharts.pm
 lib/Chart/ECharts/Bar.pm
