@@ -9,9 +9,18 @@ use Chart::ECharts;
 
 my $chart = Chart::ECharts->new();
 
-$chart->add_xAxis({type => 'category', data => ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']});
-$chart->add_yAxis({type => 'value'});
-$chart->add_series({name => 'series_name', type => 'bar', data => [120, 200, 150, 80, 70, 110, 130]});
+$chart->add_xAxis(
+    type => 'category',
+    data => ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+);
+
+$chart->add_yAxis(type => 'value');
+
+$chart->add_series(
+    name => 'series_name',
+    type => 'bar',
+    data => [120, 200, 150, 80, 70, 110, 130]
+);
 
 # Render in HTML
 $chart->render_html;
